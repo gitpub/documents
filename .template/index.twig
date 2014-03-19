@@ -1,0 +1,5 @@
+{% extends 'base.twig' %}
+
+{% block contents %}
+    {{ macro.renderMD(repository.get('index.md')) }}
+{% endblock %}

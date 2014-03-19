@@ -1,0 +1,37 @@
+{% set publicationPath = '/alu-ula/gitpub-document' %}
+{% import "macro.twig" as macro %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0" />
+        <link rel="stylesheet" href="{{ publicationPath }}/.resource/bootstrap/css/styles.css" type="text/css" />
+        <title>{{ repository.config.title }}</title>
+    </head>
+    <body>
+        <div id="header">
+            <nav class="navbar navbar-static-top navbar-default" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/">Git <span class="glyphicon glyphicon-chevron-right"></span> Pub</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="menu">
+                        <ul class="nav navbar-nav">
+                            <li {% if params.path == 'getting-started.md' %}class="active"{% endif %}><a href="{{ publicationPath }}/getting-started.md">Getting started</a></li>
+                            <li {% if params.path == 'markdown.md' %}class="active"{% endif %}><a href="{{ publicationPath }}/markdown.md">Markdown</a></li>
+                            <li {% if params.path == 'configuration.md' %}class="active"{% endif %}><a href="{{ publicationPath }}/configuration.md">Configuration</a></li>
+                            <li {% if params.path == 'template.md' %}class="active"{% endif %}><a href="{{ publicationPath }}/template.md">Template</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div id="contents"><div class="container">{% block contents %}{% endblock %}</div></div>
+    </body>
+</html>

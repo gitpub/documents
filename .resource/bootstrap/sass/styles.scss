@@ -1,0 +1,18 @@
+// customize bootstrap variables here:
+@import "variables";
+@import "bootstrap";
+
+table {
+    @extend .table;
+    @extend .table-bordered;
+}
+
+h1,
+h2,
+h3 {
+    margin: 1em 0 15px;
+}
+
+h2 {
+    @extend .page-header;
+}
