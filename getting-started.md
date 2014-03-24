@@ -39,7 +39,7 @@ $ git push -u origin master'
 
 ### Git Pubにブログを展開する
 ```sh
-$ wget -q -O - http://pull.git-pub.com/[username]/[repository]
+$ wget -q -O - http://git-pub.com/[username]/[repository]/~/pull
 {"state":"success"}
 ```
 
@@ -52,7 +52,7 @@ https://git.com/[username]/[repository]/settings/hooks/new]
 このURLを登録するべ。
 
 ```
-http://pull.git-pub.com/[username]/[repository]
+http://git-pub.com/[username]/[repository]/~/pull
 ```
 
 ## Structure
@@ -60,5 +60,5 @@ http://pull.git-pub.com/[username]/[repository]
 Path | 使い道
 ---- | -----
 .gitpub.yml | サイト全体の設定を記述する
-.resource   | このディレクトリに入れたファイルは.resource/path/to/resourceで読み込むことができる
+.resource   | このディレクトリに入れたファイルは/~/resource/path/to/resourceで読み込むことができる
 .template   | テンプレートを記述したファイルを入れる

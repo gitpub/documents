@@ -1,4 +1,3 @@
-{% set publicationPath = '/gitpub/documents' %}
 {% import "macro.twig" as macro %}
 
 <!DOCTYPE html>
@@ -7,9 +6,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0" />
         <meta name="robots" content="noindex" />
-        <link rel="stylesheet" href="{{ publicationPath }}/.resource/bootstrap/css/styles.css" type="text/css" />
-        <script type="text/javascript" src="{{ publicationPath }}/.resource/jquery-2.1.0.min.js"></script>
-        <script type="text/javascript" src="{{ publicationPath }}/.resource/bootstrap/js/bootstrap/collapse.js"></script>
+        <link rel="stylesheet" href="{{ repository_path('~/resource/bootstrap/css/styles.css')" type="text/css" />
+        <script type="text/javascript" src="{{ repository_path('~/resource/jquery-2.1.0.min.js') }}"></script>
+        <script type="text/javascript" src="{{ repository_path('~/resource/bootstrap/js/bootstrap/collapse.js') }}"></script>
         <title>{{ repository.config.title }}</title>
     </head>
     <body>
@@ -26,10 +25,10 @@
                     </div>
                     <div class="collapse navbar-collapse" id="menu">
                         <ul class="nav navbar-nav">
-                            <li {% if params.path == 'getting-started.md' %}class="active"{% endif %}><a href="{{ publicationPath }}/getting-started.md">Getting started</a></li>
-                            <li {% if params.path == 'markdown.md' %}class="active"{% endif %}><a href="{{ publicationPath }}/markdown.md">Markdown</a></li>
-                            <li {% if params.path == 'configuration.md' %}class="active"{% endif %}><a href="{{ publicationPath }}/configuration.md">Configuration</a></li>
-                            <li {% if params.path == 'template.md' %}class="active"{% endif %}><a href="{{ publicationPath }}/template.md">Template</a></li>
+                            <li {% if params.path == 'getting-started.md' %}class="active"{% endif %}><a href="{{ repository_path('getting-started.md') }}">Getting started</a></li>
+                            <li {% if params.path == 'markdown.md' %}class="active"{% endif %}><a href="{{ repository_path('markdown.md')">Markdown</a></li>
+                            <li {% if params.path == 'configuration.md' %}class="active"{% endif %}><a href="{{ repository_path('configuration.md')">Configuration</a></li>
+                            <li {% if params.path == 'template.md' %}class="active"{% endif %}><a href="{{ repository_path('template.md')">Template</a></li>
                         </ul>
                     </div>
                 </div>
