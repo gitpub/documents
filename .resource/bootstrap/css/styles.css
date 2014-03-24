@@ -7750,3 +7750,8 @@ h2,
 h3 {
   margin: 1em 0 15px;
 }
+
+/* line 20, ../sass/styles.scss */
+#contents {
+  margin-bottom: 20px;
+}

@@ -16,3 +16,7 @@ h3 {
 h2 {
     @extend .page-header;
 }
+
+#contents {
+    margin-bottom: $navbar-margin-bottom;
+}
