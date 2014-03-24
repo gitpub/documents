@@ -20,6 +20,7 @@ $ cd <!-- ko text: repositoryName --><!-- /ko -->
 $ curl -u '<!-- ko text: userName --><!-- /ko -->' https://api.github.com/user/repos -d "{\"name\":\"<!-- ko text: repositoryName --><!-- /ko -->\"}"
 Enter host password for user '<!-- ko text: userName --><!-- /ko -->':
 $ git remote set-url origin git@github.com:<!-- ko text: userName --><!-- /ko -->/<!-- ko text: repositoryName --><!-- /ko -->.git
+$ git push -u origin master
 
 # Publish Your Blog
 $ wget -q -O - http://<!-- ko text: hostname --><!-- /ko -->/<!-- ko text: userName --><!-- /ko -->/<!-- ko text: repositoryName --><!-- /ko -->/~/pull
