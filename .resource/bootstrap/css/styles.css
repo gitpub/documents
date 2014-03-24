@@ -3288,8 +3288,8 @@ input[type="button"].btn-block {
 
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url("/alu-ula/gitpub-document/~/resource/bootstrap/css/fonts/bootstrap/glyphicons-halflings-regular.eot");
-  src: url("/alu-ula/gitpub-document/~/resource/bootstrap/css/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("/alu-ula/gitpub-document/~/resource/bootstrap/css/fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("/alu-ula/gitpub-document/~/resource/bootstrap/css/fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("/alu-ula/gitpub-document/~/resource/bootstrap/css/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
+  src: url("/gitpub/gitpub-document/~/resource/bootstrap/css/fonts/bootstrap/glyphicons-halflings-regular.eot");
+  src: url("/gitpub/gitpub-document/~/resource/bootstrap/css/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("/gitpub/gitpub-document/~/resource/bootstrap/css/fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("/gitpub/gitpub-document/~/resource/bootstrap/css/fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("/gitpub/gitpub-document/~/resource/bootstrap/css/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
 }
 
 /* line 21, ../../../../../../../../../usr/local/share/gems/gems/bootstrap-sass-3.1.1.0/vendor/assets/stylesheets/bootstrap/_glyphicons.scss */
