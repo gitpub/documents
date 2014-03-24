@@ -47,7 +47,7 @@ $ wget -q -O - http://git-pub.com/[username]/[repository]/~/pull
 http://git-pub.com/[username]/[repository]/
 
 ### Webhookを使って自動的に更新されるようにする
-https://git.com/[username]/[repository]/settings/hooks/new]
+https://git.com/[username]/[repository]/settings/hooks/new
 
 このURLを登録するべ。
 
