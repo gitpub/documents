@@ -1,6 +1,6 @@
----
+<!--
 title: Template
----
+-->
 
 ## About
 テンプレートは`.template`ディレクトリ内に作成する。
