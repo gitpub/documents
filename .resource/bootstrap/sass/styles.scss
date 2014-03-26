@@ -20,4 +20,8 @@ h2 {
 
 #contents {
     margin-bottom: $navbar-margin-bottom;
+    code {
+        white-space: normal;
+        word-break: break-all;
+    }
 }
