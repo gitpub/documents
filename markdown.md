@@ -45,13 +45,36 @@ Markdownはお使いのリポジトリ内の**どのディレクトリにでも�
 
 記事の種類や年月でディレクトリを分けたければ、そのようにして下さい。Git Pubは全てのディレクトリからMarkdownを探し出し、記事としてレンダリングします。
 
-Skeletonに則り```md```ディレクトリに配置した場合、単一の記事のURLは```/username/repository/md/markdown.md```になります。```2014/03/```ディレクトリに配置した場合は、```/username/repository/2014/03/markdown.md```になります。**Git Pubは単にMarkdownが配置されたパスをURLとして扱います**。
+Skeletonに則り```md```ディレクトリに配置した場合、単一の記事のURLは
+```
+/username/repository/md/markdown.md
+```
+になります。
+```
+2014/03/
+```
+ディレクトリに配置した場合は、
+```
+/username/repository/2014/03/markdown.md
+```
+になります。**Git Pubは単にMarkdownが配置されたパスをURLとして扱います**。
 
 厳密には**どのディレクトリにでも配置することができる**というのは真実ではありません。Git Pubではドットで始まるディレクトリとファイルは特別なものとして扱われます。ドットで始まるディレクトリを、Markdownの格納先として使用するべきではありません。使用した場合、格納されたMarkdownは無視されます。もちろん、ドットで始まるファイル名のMarkdownも作るべきではありません。
 
 ## 画像、あるいはその他のリソース
 可憐な女性プログラマーはランチの写真をアップする画像の格納先が必要になるでしょう。
 
-画像を含むリソース（htmlでsrcやhrefに指定するもの）は```.resource```ディレクトリに配置します。```.resource```ディレクトリに配置したものは```/username/repository/~/resource/path/to/resource```としてリクエストすることができます。```.resource/img/nude.jpg```に配置した場合は```/username/repository/~/resource/path/img/nude.jpg```となります。
+画像を含むリソース（htmlでsrcやhrefに指定するもの）は```.resource```ディレクトリに配置します。```.resource```ディレクトリに配置したものは
+```
+/username/repository/~/resource/path/to/resource
+```
+としてリクエストすることができます。
+```
+.resource/img/nude.jpg
+```
+に配置した場合は
+```
+/username/repository/~/resource/path/img/nude.jpg
+```となります。
 
 ```.resource```内ではディレクトリを自由に作成できます。```.resource```以外に配置したファイルをリクエストすることはできません。404になります。

@@ -7758,4 +7758,5 @@ h3 {
 /* line 23, ../sass/styles.scss */
 #contents code {
   white-space: normal;
+  word-break: break-all;
 }
