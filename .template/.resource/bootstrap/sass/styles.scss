@@ -35,7 +35,9 @@ h2 {
         line-height: 1.7em;
         code {
             white-space: normal;
-            word-break: break-all;
+        }
+        pre code {
+            white-space: pre-wrap;
         }
     }
 }
