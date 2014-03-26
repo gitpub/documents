@@ -7744,14 +7744,18 @@ button.close {
     display: none !important;
   }
 }
-/* line 12, ../sass/styles.scss */
+/* line 13, ../sass/styles.scss */
 h1,
 h2,
 h3 {
   margin: 1em 0 15px;
 }
 
-/* line 20, ../sass/styles.scss */
+/* line 21, ../sass/styles.scss */
 #contents {
   margin-bottom: 20px;
+}
+/* line 23, ../sass/styles.scss */
+#contents code {
+  white-space: normal;
 }
