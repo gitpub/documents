@@ -34,6 +34,8 @@
                 </div>
             </nav>
         </div>
-        <div id="contents"><div class="container">{% block contents %}{% endblock %}</div></div>
+        <div id="contents" {% if contentsClass is defined %}class="{{ contentsClass }}"{% endif %}>
+            <div class="{% if containerClass is defined %}{{ containerClass }}{% else %}container{% endif %}">{% block contents %}{% endblock %}</div>
+        </div>
     </body>
 </html>
