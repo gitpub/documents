@@ -1,6 +1,6 @@
 routes:
   :index: index.twig
-  :md: page.twig
+  :md: md.twig
   :notfound: notfound.twig
   :error: error.twig
   {path:getting-started.md}: getting-started.twig

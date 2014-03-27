@@ -1,0 +1,34 @@
+/* line 5, ../sass/style.scss */
+#contents.index h2 {
+  font-size: 40px;
+  border-width: 0;
+}
+/* line 9, ../sass/style.scss */
+#contents.index .header {
+  margin: -20px -15px 40px -15px;
+  padding: 60px 0;
+  background-color: #d26911;
+  color: white;
+}
+/* line 14, ../sass/style.scss */
+#contents.index .header .glyphicon {
+  margin-bottom: 30px;
+  padding: 15px;
+  border: 1px solid white;
+  border-radius: 15%;
+  font-size: 108px;
+}
+/* line 21, ../sass/style.scss */
+#contents.index .header .btn {
+  border-color: white;
+  color: white;
+}
+/* line 24, ../sass/style.scss */
+#contents.index .header .btn:hover {
+  background-color: white;
+  color: #d26911;
+}
+/* line 31, ../sass/style.scss */
+#contents.index .body .lead {
+  font-size: 16px;
+}

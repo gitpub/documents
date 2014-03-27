@@ -1,5 +1,42 @@
 {% extends 'base.twig' %}
 
+{% set contentsClass = 'index' %}
+{% set containerClass = 'container-fluid' %}
+
 {% block contents %}
-    {{ macro.renderMD(repository.get('index.md')) }}
+    <div class="header">
+        <div class="container text-center">
+            <span class="glyphicon glyphicon-glass"></span>
+            <p class="lead">ブログを書きたい<br />ただしテキストエディタで</p>
+            <p class="lead">
+                <a class="btn btn-lg" href="{{ repository_path('getting-started.md') }}">Getting started</a>
+            </p>
+        </div>
+    </div>
+    <div class="container text-center">
+        <article>
+            <div class="body">
+                <h2>さようなら、ブラウザ</h2>
+                <p class="lead">忌々しいブラウザで動作するエディタにさよならしましょう<br />私達は最高のテキストエディタをもっているはずです</p>
+                <hr />
+                <div class="row">
+                    <div class="col-sm-4">
+                        <img alt="Git Hub" src="{{ repository_path('~/template_resource/img/github.png') }}">
+                        <h3>記事はGitHubに</h3>
+                        <p>GitHubから記事をpullします。<br />だからいきなりサービスが終わっても大丈夫。:P</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <img alt="Your Editor" src="{{ repository_path('~/template_resource/img/emacs.png') }}">
+                        <h3>お好きなエディタで</h3>
+                        <p>Emacs？Vim？Notepad？<br />お好きなエディタでどうぞ。</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <img alt="MarkDown" src="{{ repository_path('~/template_resource/img/markdown.png') }}">
+                        <h3>もちろんMarkdownに対応</h3>
+                        <p>記事はMarkdownで記述します。<br />みんな、大好きでしょう？</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
 {% endblock %}

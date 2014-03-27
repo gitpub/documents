@@ -1,1 +1,36 @@
-//
+$brand-primary: #D26911;
+
+#contents {
+    &.index {
+        h2 {
+            font-size: 40px;
+            border-width: 0;
+        }
+        .header {
+            margin: -20px -15px 40px -15px;
+            padding: 60px 0;
+            background-color: $brand-primary;
+            color: white;
+            .glyphicon {
+                margin-bottom: 30px;
+                padding: 15px;
+                border: 1px solid lighten($brand-primary, 60%);
+                border-radius: 15%;
+                font-size: 108px;
+            }
+            .btn {
+                border-color: lighten($brand-primary, 60%);
+                color: white;
+                &:hover {
+                    background-color: white;
+                    color: $brand-primary;
+                }
+            }
+        }
+        .body {
+            .lead {
+                font-size: 16px;
+            }
+        }
+    }
+}
