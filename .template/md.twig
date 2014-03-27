@@ -1,5 +1,8 @@
 {% extends 'base.twig' %}
 
+{% set file = repository.get(params.path) %}
+{% set pageTitle = file.meta.title %}
+
 {% block contents %}
-    {{ macro.renderMD(repository.get(params.path)) }}
+    {{ macro.renderMD(file) }}
 {% endblock %}

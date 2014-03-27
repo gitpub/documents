@@ -1,7 +1,12 @@
 $(function() {
     ko.applyBindings({
         hostname: location.hostname,
-        userName: ko.observable(null),
-        repositoryName: ko.observable(null)
+        user: ko.observable(null),
+        repository: ko.observable(null)
     });
+    $('input').keypress(function(e) {
+        if (e.keyCode === 13) {
+            $(this).blur().parent().next().find('input').focus();
+        }
+    })
 });

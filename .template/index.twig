@@ -4,13 +4,32 @@
 {% set containerClass = 'container-fluid' %}
 
 {% block contents %}
+{% set command ='
+# スケルトンをクローンします
+$ git clone https://github.com/gitpub/skeleton.git <!-- ko text: repository --><!-- /ko -->
+$ cd <!-- ko text: repository --><!-- /ko -->
+
+# GitHubのリポジトリにブログをpushします
+$ curl -u \'<!-- ko text: user --><!-- /ko -->\' https://api.github.com/user/repos -d "{\"name\":\"<!-- ko text: repository --><!-- /ko -->\"}"
+Enter host password for user \'<!-- ko text: user --><!-- /ko -->\':
+$ git remote set-url origin git@github.com:<!-- ko text: user --><!-- /ko -->/<!-- ko text: repository --><!-- /ko -->.git
+$ git push -u origin master
+
+# ブログをGitPubにデプロイします
+$ wget -q -O - http://<!-- ko text: hostname --><!-- /ko -->/<!-- ko text: user --><!-- /ko -->/<!-- ko text: repository --><!-- /ko -->/~/pull
+{"state":"success"}
+' %}
+
+
+    <script type="text/javascript" src="{{ repository_path('~/resource/knockout-3.1.0.js') }}"></script>
+    <script type="text/javascript" src="{{ repository_path('~/resource/getting-started.js') }}"></script>
     <div class="header">
-        <div class="container text-center">
-            <span class="glyphicon glyphicon-glass"></span>
-            <p class="lead">ブログを書きたい<br />ただしテキストエディタで</p>
-            <p class="lead">
-                <a class="btn btn-lg" href="{{ repository_path('getting-started.md') }}">Getting started</a>
-            </p>
+        <div class="container">
+            <div class="text-center">
+                <span class="glyphicon glyphicon-glass"></span>
+                <p class="lead">ブログを書きたい<br />ただしテキストエディタで</p>
+                <a class="btn btn-lg" href="#getting-started" data-bind="click: function() { $('html, body').animate({ scrollTop: $('#getting-started').offset().top });  return false; }">Getting started</a>
+            </div>
         </div>
     </div>
     <div class="container text-center">
@@ -18,24 +37,39 @@
             <div class="body">
                 <h2>さようなら、ブラウザ</h2>
                 <p class="lead">忌々しいブラウザで動作するエディタにさよならしましょう<br />私達は最高のテキストエディタをもっているはずです</p>
-                <hr />
                 <div class="row">
-                    <div class="col-sm-4">
-                        <img alt="Git Hub" src="{{ repository_path('~/template_resource/img/github.png') }}">
-                        <h3>記事はGitHubに</h3>
-                        <p>GitHubから記事をpullします。<br />だからいきなりサービスが終わっても大丈夫。:P</p>
-                    </div>
                     <div class="col-sm-4">
                         <img alt="Your Editor" src="{{ repository_path('~/template_resource/img/emacs.png') }}">
                         <h3>お好きなエディタで</h3>
                         <p>Emacs？Vim？Notepad？<br />お好きなエディタでどうぞ。</p>
                     </div>
                     <div class="col-sm-4">
+                        <img alt="Git Hub" src="{{ repository_path('~/template_resource/img/github.png') }}">
+                        <h3>記事はGitHubに</h3>
+                        <p>GitHubから記事をpullします。<br />Web Hookで自動更新できます。</p>
+                    </div>
+                    <div class="col-sm-4">
                         <img alt="MarkDown" src="{{ repository_path('~/template_resource/img/markdown.png') }}">
-                        <h3>もちろんMarkdownに対応</h3>
+                        <h3>当然、Markdown</h3>
                         <p>記事はMarkdownで記述します。<br />みんな、大好きでしょう？</p>
                     </div>
                 </div>
+                <hr />
+                <h2 id="getting-started">Getting started</h2>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="GitHubのユーザ名を入力してください" data-bind="value: user"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="ブログを格納するリポジトリ名を決めて下さい" data-bind="value: repository"/>
+                        </div>
+                    </div>
+                    <div class="col-sm-8 text-left">
+                        <pre class="step" data-bind="css: { step1: user() !== null, step2: user() !== null && repository() !== null }"><code>{{ command | trim | raw }}</code></pre>
+                    </div>
+                </div>
+                <a class="btn btn-primary btn-lg step" data-bind="attr: { href: '/' + user() + '/' + repository() + '/' }, css: { step1: user() !== null, step2: user() !== null && repository() !== null }"">コマンドを実行したらこちら</a>
             </div>
         </article>
     </div>

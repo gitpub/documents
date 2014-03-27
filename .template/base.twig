@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="{{ repository_path('~/template_resource/css/style.css') }}" type="text/css" />
         <script type="text/javascript" src="/js/jquery-2.1.0.min.js"></script>
         <script type="text/javascript" src="/js/bootstrap/collapse.js"></script>
-        <title>{{ repository.config.title }}</title>
+        <title>{{ pageTitle is defined ? "#{pageTitle} - " : '' }}{{ repository.config.title }}</title>
     </head>
     <body>
         <div id="header">
@@ -25,10 +25,8 @@
                     </div>
                     <div class="collapse navbar-collapse" id="menu">
                         <ul class="nav navbar-nav">
-                            <li {% if params.path == 'getting-started.md' %}class="active"{% endif %}><a href="{{ repository_path('getting-started.md') }}">Getting started</a></li>
                             <li {% if params.path == 'markdown.md' %}class="active"{% endif %}><a href="{{ repository_path('markdown.md') }}">Markdown</a></li>
                             <li {% if params.path == 'configuration.md' %}class="active"{% endif %}><a href="{{ repository_path('configuration.md') }}">Configuration</a></li>
-                            <li {% if params.path == 'template.md' %}class="active"{% endif %}><a href="{{ repository_path('template.md') }}">Template</a></li>
                         </ul>
                     </div>
                 </div>

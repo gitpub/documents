@@ -1,16 +1,16 @@
-/* line 5, ../sass/style.scss */
+/* line 7, ../sass/style.scss */
 #contents.index h2 {
   font-size: 40px;
   border-width: 0;
 }
-/* line 9, ../sass/style.scss */
+/* line 11, ../sass/style.scss */
 #contents.index .header {
   margin: -20px -15px 40px -15px;
   padding: 60px 0;
-  background-color: #d26911;
   color: white;
+  background-color: #d26911;
 }
-/* line 14, ../sass/style.scss */
+/* line 16, ../sass/style.scss */
 #contents.index .header .glyphicon {
   margin-bottom: 30px;
   padding: 15px;
@@ -18,17 +18,37 @@
   border-radius: 15%;
   font-size: 108px;
 }
-/* line 21, ../sass/style.scss */
+/* line 23, ../sass/style.scss */
 #contents.index .header .btn {
   border-color: white;
   color: white;
 }
-/* line 24, ../sass/style.scss */
+/* line 26, ../sass/style.scss */
 #contents.index .header .btn:hover {
   background-color: white;
   color: #d26911;
 }
-/* line 31, ../sass/style.scss */
+/* line 33, ../sass/style.scss */
+#contents.index .body .step {
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+  opacity: 0.05;
+}
+/* line 36, ../sass/style.scss */
+#contents.index .body .step.step1 {
+  opacity: 0.2;
+}
+/* line 39, ../sass/style.scss */
+#contents.index .body .step.step2 {
+  opacity: 1;
+}
+/* line 43, ../sass/style.scss */
 #contents.index .body .lead {
   font-size: 16px;
+}
+/* line 46, ../sass/style.scss */
+#contents.index .body .btn {
+  margin-top: 15px;
 }

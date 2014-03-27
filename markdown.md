@@ -3,7 +3,7 @@ title: Markdown
 -->
 
 ## Syntax
-Git PubはMarkdownによって記述されたファイルをHTMLにパースします。[GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown)な記述が可能です。
+GitPubはMarkdownによって記述されたファイルをHTMLにパースします。[GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown)な記述が可能です。
 
 
 ## Meta
@@ -23,7 +23,7 @@ categories: [category1, category2, ...]
 
 
 ### 特別なMeta
-メタ情報は全てOptionalです。ただし、いくつかのMeta情報はGit Pubが参照します。
+メタ情報は全てOptionalです。ただし、いくつかのMeta情報はGitPubが参照します。
 
 Meta  | 使い道
 ----- | ------
@@ -41,14 +41,14 @@ description | ドキュメントの概要として扱います (`<meta name="des
 `title`はMarkdownのheadingによって代用できるでしょう。ただし、(例えば「最近の投稿」をリストするような）機能を追加する際に使用する可能性があります。必須ではありませんが、指定しておくのがベターです。
 
 ## Markdownファイルの配置
-Markdownはお使いのリポジトリ内の*どのディレクトリにでも配置することができます*。[Git Pub Skeleton](https://github.com/gitpub/skeleton)では```md```ディレクトリに配置するようになっています。
+Markdownはお使いのリポジトリ内の*どのディレクトリにでも配置することができます*。[GitPub Skeleton](https://github.com/gitpub/skeleton)では```md```ディレクトリに配置するようになっています。
 
-記事の種類や年月でディレクトリを分けたければ、そのようにして下さい。Git Pubは全てのディレクトリからMarkdownを探し出し、記事としてレンダリングします。
+記事の種類や年月でディレクトリを分けたければ、そのようにして下さい。GitPubは全てのディレクトリからMarkdownを探し出し、記事としてレンダリングします。
 
 ```
 md/markdown.md
 ```
-そして配置した場合は
+として配置した場合は
 ```
 /username/repository/md/markdown.md
 ```
@@ -60,9 +60,9 @@ md/markdown.md
 ```
 /username/repository/2014/03/markdown.md
 ```
-になります。*Git Pubは単にMarkdownが配置されたパスをURLとして扱います*。
+になります。*GitPubは単にMarkdownが配置されたパスをURLとして扱います*。
 
-厳密には*どのディレクトリにでも配置することができる*わけではありません。Git Pubではドットで始まるディレクトリとファイルは特別なものとして扱われます。ドットで始まるディレクトリを、Markdownの格納先として使用するべきではありません。使用した場合、格納されたMarkdownは無視されます。もちろん、ドットで始まるファイル名のMarkdownも作るべきではありません。
+厳密には*どのディレクトリにでも配置することができる*わけではありません。GitPubではドットで始まるディレクトリとファイルは特別なものとして扱われます。ドットで始まるディレクトリを、Markdownの格納先として使用するべきではありません。使用した場合、格納されたMarkdownは無視されます。もちろん、ドットで始まるファイル名のMarkdownも作るべきではありません。
 
 ## 画像、あるいはその他のリソース
 可憐な女性プログラマーはランチの写真をアップする画像の格納先が必要になるでしょう。
