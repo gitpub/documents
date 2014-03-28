@@ -48,18 +48,25 @@ Markdownはお使いのリポジトリ内の*どのディレクトリにでも�
 ```
 md/markdown.md
 ```
+
 として配置した場合は
+
 ```
 /username/repository/md/markdown.md
 ```
+
 になります。
+
 ```
 2014/03/markdown.md
 ```
+
 として配置した場合は
+
 ```
 /username/repository/2014/03/markdown.md
 ```
+
 になります。*GitPubは単にMarkdownが配置されたパスをURLとして扱います*。
 
 厳密には*どのディレクトリにでも配置することができる*わけではありません。GitPubではドットで始まるディレクトリとファイルは特別なものとして扱われます。ドットで始まるディレクトリを、Markdownの格納先として使用するべきではありません。使用した場合、格納されたMarkdownは無視されます。もちろん、ドットで始まるファイル名のMarkdownも作るべきではありません。
@@ -68,17 +75,23 @@ md/markdown.md
 可憐な女性プログラマーはランチの写真をアップする画像の格納先が必要になるでしょう。
 
 画像を含むリソース（htmlでsrcやhrefに指定するもの）は```.resource```ディレクトリに配置します。```.resource```ディレクトリに配置したものは
+
 ```
 /username/repository/~/resource/path/to/resource
 ```
+
 としてリクエストすることができます。
+
 ```
 .resource/img/nude.jpg
 ```
+
 に配置した場合は
+
 ```
 /username/repository/~/resource/path/img/nude.jpg
 ```
+
 となります。
 
 ```.resource```内ではディレクトリを自由に作成できます。```.resource```以外に配置したファイルをリクエストすることはできません。404になります。
