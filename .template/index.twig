@@ -9,6 +9,10 @@
 $ git clone https://github.com/gitpub/skeleton.git <!-- ko text: repository --><!-- /ko -->
 $ cd <!-- ko text: repository --><!-- /ko -->
 
+# 恥ずかしいからskeletonののコミットログは消してね;P
+$ rm -rf .git
+$ git init
+
 # GitHubのリポジトリにブログをpushします
 $ curl -u \'<!-- ko text: user --><!-- /ko -->\' https://api.github.com/user/repos -d "{\"name\":\"<!-- ko text: repository --><!-- /ko -->\"}"
 Enter host password for user \'<!-- ko text: user --><!-- /ko -->\':
