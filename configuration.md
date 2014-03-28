@@ -13,7 +13,7 @@ disqus_shortname: your-disqus-shortname
 ### 有効な値
 値  | 使い道
 --- | ------
-title            | サイト全体のタイトルです。```<title />```に使用されます。
+title            | サイト全体のタイトルです。`<title />`に使用されます。
 disqus_shortname | [Disqus](http://disqus.com/)のshortnameです。設定しておくことで記事に自動的にDisqusのフォームが挿入されます。
 
 

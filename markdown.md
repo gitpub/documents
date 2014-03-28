@@ -41,7 +41,7 @@ description | ドキュメントの概要として扱います (`<meta name="des
 `title`はMarkdownのheadingによって代用できるでしょう。ただし、(例えば「最近の投稿」をリストするような）機能を追加する際に使用する可能性があります。必須ではありませんが、指定しておくのがベターです。
 
 ## Markdownファイルの配置
-Markdownはお使いのリポジトリ内の*どのディレクトリにでも配置することができます*。[GitPub Skeleton](https://github.com/gitpub/skeleton)では```md```ディレクトリに配置するようになっています。
+Markdownはお使いのリポジトリ内の*どのディレクトリにでも配置することができます*。[GitPub Skeleton](https://github.com/gitpub/skeleton)では`md`ディレクトリに配置するようになっています。
 
 記事の種類や年月でディレクトリを分けたければ、そのようにして下さい。GitPubは全てのディレクトリからMarkdownを探し出し、記事としてレンダリングします。
 
@@ -74,7 +74,7 @@ md/markdown.md
 ## 画像、あるいはその他のリソース
 可憐な女性プログラマーはランチの写真をアップする画像の格納先が必要になるでしょう。
 
-画像を含むリソース（htmlでsrcやhrefに指定するもの）は```.resource```ディレクトリに配置します。```.resource```ディレクトリに配置したものは
+画像を含むリソース（htmlでsrcやhrefに指定するもの）は`.resource`ディレクトリに配置します。`.resource`ディレクトリに配置したものは
 
 ```
 /username/repository/~/resource/path/to/resource
@@ -94,4 +94,4 @@ md/markdown.md
 
 となります。
 
-```.resource```内ではディレクトリを自由に作成できます。```.resource```以外に配置したファイルをリクエストすることはできません。404になります。
+`.resource`内ではディレクトリを自由に作成できます。`.resource`以外に配置したファイルをリクエストすることはできません。404になります。
