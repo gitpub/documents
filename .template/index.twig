@@ -14,7 +14,7 @@ $ rm -rf .git
 $ git init
 
 # GitHubのリポジトリにブログをpushします
-$ curl <span data-bind="visible: !twoStepAuth()">-u \'<!-- ko text: user --><!-- /ko -->\'</span><span data-bind="visible: twoStepAuth()">-H \'<!-- ko text:authToken --><!-- /ko --!>\'</span> https://api.github.com/user/repos -d "{\"name\":\"<!-- ko text: repository --><!-- /ko -->\"}"
+$ curl <span data-bind="visible: !twoStepAuth()">-u \'<!-- ko text: user --><!-- /ko -->\'</span><span data-bind="visible: twoStepAuth()">-H Authorization: token \'<!-- ko text:authToken --><!-- /ko --!>\'</span> https://api.github.com/user/repos -d "{\"name\":\"<!-- ko text: repository --><!-- /ko -->\"}"
 $ git remote set-url origin git@github.com:<!-- ko text: user --><!-- /ko -->/<!-- ko text: repository --><!-- /ko -->.git
 $ git push -u origin master
 
