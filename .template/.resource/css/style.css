@@ -42,13 +42,17 @@
 }
 /* line 39, ../sass/style.scss */
 #contents.index .body .step.step2 {
+  opacity: 0.4;
+}
+/* line 42, ../sass/style.scss */
+#contents.index .body .step.step3 {
   opacity: 1;
 }
-/* line 43, ../sass/style.scss */
+/* line 46, ../sass/style.scss */
 #contents.index .body .lead {
   font-size: 16px;
 }
-/* line 46, ../sass/style.scss */
+/* line 49, ../sass/style.scss */
 #contents.index .body .btn {
   margin-top: 15px;
 }
