@@ -14,8 +14,7 @@ $ rm -rf .git
 $ git init
 
 # GitHubのリポジトリにブログをpushします
-$ curl -u \'<!-- ko text: user --><!-- /ko -->\' https://api.github.com/user/repos -d "{\"name\":\"<!-- ko text: repository --><!-- /ko -->\"}"
-Enter host password for user \'<!-- ko text: user --><!-- /ko -->\':
+$ curl <span data-bind="visible: !twoStepAuth()">-u \'<!-- ko text: user --><!-- /ko -->\'</span><span data-bind="visible: twoStepAuth()">-H \'<!-- ko text:authToken --><!-- /ko --!>\'</span> https://api.github.com/user/repos -d "{\"name\":\"<!-- ko text: repository --><!-- /ko -->\"}"
 $ git remote set-url origin git@github.com:<!-- ko text: user --><!-- /ko -->/<!-- ko text: repository --><!-- /ko -->.git
 $ git push -u origin master
 
@@ -23,8 +22,6 @@ $ git push -u origin master
 $ wget -q -O - http://<!-- ko text: hostname --><!-- /ko -->/<!-- ko text: user --><!-- /ko -->/<!-- ko text: repository --><!-- /ko -->/~/pull
 {"state":"success"}
 ' %}
-
-
     <script type="text/javascript" src="{{ repository_path('~/resource/knockout-3.1.0.js') }}"></script>
     <script type="text/javascript" src="{{ repository_path('~/resource/getting-started.js') }}"></script>
     <div class="header">
@@ -63,17 +60,31 @@ $ wget -q -O - http://<!-- ko text: hostname --><!-- /ko -->/<!-- ko text: user 
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="form-group">
+                            <div class="btn-group" data-toggle="buttons">
+                                <label class="btn btn-primary" data-bind="css: { active: !twoStepAuth() }, click: function() { twoStepAuth(false); }">
+                                    <input type="radio" name="auth">通常の認証
+                                </label>
+                                <label class="btn btn-primary" data-bind="css: { active: twoStepAuth() }, click: function() { twoStepAuth(true); }">
+                                    <input type="radio" name="auth">２段階認証
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
                             <input type="text" class="form-control" placeholder="GitHubのユーザ名を入力してください" data-bind="value: user"/>
                         </div>
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="ブログを格納するリポジトリ名を決めて下さい" data-bind="value: repository"/>
                         </div>
+                        <div class="form-group" data-bind="visible: twoStepAuth()">
+                            <input type="text" class="form-control" placeholder="Personal access token" data-bind="value: authToken"/>
+                            <small><a href="https://github.com/settings/applications">ここ</a>でトークンを取得してください</small>
+                        </div>
                     </div>
                     <div class="col-sm-8 text-left">
-                        <pre class="step" data-bind="css: { step1: user() !== null, step2: user() !== null && repository() !== null }"><code>{{ command | trim | raw }}</code></pre>
+                        <pre class="step" data-bind="css: { step1: user() !== null, step2: user() !== null && repository() !== null, step3: user() !== null && repository() !== null && (!twoStepAuth() || authToken() !== null) }"><code>{{ command | trim | raw }}</code></pre>
                     </div>
                 </div>
-                <a class="btn btn-primary btn-lg step" data-bind="attr: { href: '/' + user() + '/' + repository() + '/' }, css: { step1: user() !== null, step2: user() !== null && repository() !== null }"">コマンドを実行したらこちら</a>
+                <a class="btn btn-primary btn-lg step" data-bind="css: { step1: user() !== null, step2: user() !== null && repository() !== null, step3: user() !== null && repository() !== null && (!twoStepAuth() || authToken() !== null) }">コマンドを実行したらこちら</a>
             </div>
         </article>
     </div>

@@ -3,4 +3,3 @@ routes:
   :md: md.twig
   :notfound: notfound.twig
   :error: error.twig
-  "{path:getting-started.md}": getting-started.twig
