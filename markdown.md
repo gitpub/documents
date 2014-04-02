@@ -9,7 +9,7 @@ GitPubはMarkdownによって記述されたファイルをHTMLにパースし�
 ## Meta
 Markdownにはメタ情報を含めることができます。メタ情報はHTMLコメント内にYAML形式で記述します。
 
-```
+```text
 <!--
 title: ページのタイトル
 date: ページの作成日など
