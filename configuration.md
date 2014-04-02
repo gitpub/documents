@@ -5,7 +5,7 @@ title: Configuration
 ## .gitpub.yml
 サイト全体の動作を制御する設定ファイルで、[yaml形式](http://ja.wikipedia.org/wiki/YAML)で記述します。
 
-```
+```yaml
 title: My Blog
 disqus_shortname: your-disqus-shortname
 ```
@@ -20,7 +20,7 @@ disqus_shortname | [Disqus](http://disqus.com/)のshortnameです。設定して
 ## Web Hookを使った自動更新
 GitPubは
 
-```
+```text
 http://git-pub.com/username/repository/~/pull
 ```
 

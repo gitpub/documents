@@ -9,7 +9,7 @@ GitPubはMarkdownによって記述されたファイルをHTMLにパースし�
 ## Meta
 Markdownにはメタ情報を含めることができます。メタ情報はHTMLコメント内にYAML形式で記述します。
 
-```text
+```yaml
 <!--
 title: ページのタイトル
 date: ページの作成日など
@@ -45,25 +45,25 @@ Markdownはお使いのリポジトリ内の*どのディレクトリにでも�
 
 記事の種類や年月でディレクトリを分けたければ、そのようにして下さい。GitPubは全てのディレクトリからMarkdownを探し出し、記事としてレンダリングします。
 
-```
+```text
 md/markdown.md
 ```
 
 として配置した場合は
 
-```
+```text
 /username/repository/md/markdown.md
 ```
 
 になります。
 
-```
+```text
 2014/03/markdown.md
 ```
 
 として配置した場合は
 
-```
+```text
 /username/repository/2014/03/markdown.md
 ```
 
@@ -76,21 +76,21 @@ md/markdown.md
 
 画像を含むリソース（htmlでsrcやhrefに指定するもの）は`.resource`ディレクトリに配置します。`.resource`ディレクトリに配置したものは
 
-```
+```text
 /username/repository/~/resource/path/to/resource
 ```
 
 としてリクエストすることができます。
 
-```
+```text
 .resource/img/nude.jpg
 ```
 
 に配置した場合は
 
-```
+```text
 /username/repository/~/resource/path/img/nude.jpg
-```
+```text
 
 となります。
 
