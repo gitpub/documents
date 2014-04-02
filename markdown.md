@@ -90,7 +90,7 @@ md/markdown.md
 
 ```text
 /username/repository/~/resource/path/img/nude.jpg
-```text
+```
 
 となります。
 
