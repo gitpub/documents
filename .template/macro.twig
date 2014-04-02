@@ -1,6 +1,6 @@
 {% macro renderMD(file) %}
     <article>
         <h1>{{ file.meta.title }}</h1>
-        <div class="body">{{ file.content | md | raw }}</div>
+        <div class="body">{{ file | md | raw }}</div>
     </article>
 {% endmacro %}
