@@ -1,0 +1,15 @@
+diff --git a/.template/index.twig b/.template/index.twig
+index ea2cebf..1b073b8 100644
+--- a/.template/index.twig
++++ b/.template/index.twig
+@@ -14,8 +14,8 @@ $ rm -rf .git
+ $ git init
+ 
+ # GitHubのリポジトリにブログをpushします
+-$ curl <span data-bind="visible: !twoStepAuth()">-u \'<!-- ko text: user --><!-- /ko -->\'</span><span data-bind="visible: twoStepAuth()">-H \'Authorization: token <!-- ko text:authToken --><!-- /ko --!>\'</span> https://api.github.com/user/repos -d "{\"name\":\"<!-- ko text: repository --><!-- /ko -->\"}"
+-$ git remote set-url origin git@github.com:<!-- ko text: user --><!-- /ko -->/<!-- ko text: repository --><!-- /ko -->.git
++$ curl <span data-bind="visible: !twoStepAuth()">-u \'<!-- ko text: user --><!-- /ko -->\'</span><span data-bind="visible: twoStepAuth()">-H \'Authorization: token <!-- ko text:authToken --><!-- /ko --!>\'</span> https://api.github.com/user/repos -d \'{\"name\":\"<!-- ko text: repository --><!-- /ko -->\"}\'
++$ git remote add origin git@github.com:<!-- ko text: user --><!-- /ko -->/<!-- ko text: repository --><!-- /ko -->.git
+ $ git push -u origin master
+ 
+ # ブログをGitPubにデプロイします
